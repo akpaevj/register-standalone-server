@@ -39,7 +39,7 @@ $parsedConfig = ConvertFrom-Yaml -Yaml $configContent
 $ssCred = Get-Credential -UserName "$env:COMPUTERNAME\USR1CV8" -Message "Enter service credentials"
 
 if ($null -ne $bakPath) {
-    $sp = ConvertTo-SecureString $dbPassword -AsPlainText -Force
+    $sp = ConvertTo-SecureString $parsedConfig.database.password -AsPlainText -Force
     $sp.MakeReadOnly()
     $sqlCred = New-Object System.Data.SqlClient.SqlCredential($dbUser, $sp )
 
