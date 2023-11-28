@@ -1,0 +1,25 @@
+server:
+  address: localhost
+  port: 8314
+database:
+  dbms: MSSQLServer
+  server: localhost
+  name: erp_dev
+  user: sa
+  password: 12345
+infobase:
+  id: 775ad2a0-0a27-4268-98b2-37bdbd890b7d
+  name: erp_dev
+  distribute-licenses: yes
+  schedule-jobs: allow
+http:
+  base: /webaccess
+  http-services:
+    publish-extensions-by-default: true
+    service:
+      name: MobileApi
+      root: mobileapi
+debug:
+  type: http
+features:
+  http-gate: allow
