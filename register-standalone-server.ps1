@@ -1,5 +1,6 @@
 #Requires -RunAsAdministrator
 Import-Module powershell-yaml
+Import-Module SQLServer
 
 $config = $args[0]
 $bakPath = $args[1]

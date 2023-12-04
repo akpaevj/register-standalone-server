@@ -19,7 +19,14 @@ http:
     service:
       name: MobileApi
       root: mobileapi
+gates:
+  ssh:
+    default:
+      address: any
+      port: 8282
+      host-key: auto
 debug:
   type: http
 features:
   http-gate: allow
+  ssh-gate: allow
